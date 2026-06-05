@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro da Empresa | WorkScale</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+  <header class="cabecalho">
+    <div class="container cabecalho-conteudo">
+
+      <a href="index.html" class="logo-area">
+        <img src="./imagens/logo-workscale.png" alt="Logo WorkScale" class="logo">
+      </a>
+
+      <nav class="menu">
+        <a href="index.html">Início</a>
+        <a href="empresa.html" class="ativo">Cadastro da Empresa</a>
+        <a href="escala.html">Montagem da Escala</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="faq.html">FAQ</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <main>
+
+    <section class="secao secao-clara">
+      <div class="container">
+
+        <h1 class="titulo-secao">Cadastro da Empresa</h1>
+
+        <p class="subtitulo-secao">
+          Preencha os dados principais da empresa para iniciar a organização das escalas de trabalho.
+        </p>
+
+        <form class="formulario">
+
+          <div class="grupo-campo">
+            <label for="nome-empresa">Nome da empresa</label>
+            <input type="text" id="nome-empresa" name="nome-empresa" placeholder="Ex: Mercado Bom Preço">
+          </div>
+
+          <div class="grupo-campo">
+            <label for="cnpj">CNPJ</label>
+            <input type="text" id="cnpj" name="cnpj" placeholder="00.000.000/0000-00">
+          </div>
+
+          <div class="grupo-campo">
+            <label for="responsavel">Responsável pela empresa</label>
+            <input type="text" id="responsavel" name="responsavel" placeholder="Nome do responsável">
+          </div>
+
+          <div class="grupo-campo">
+            <label for="telefone">Telefone</label>
+            <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000">
+          </div>
+
+          <div class="grupo-campo">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" placeholder="empresa@email.com">
+          </div>
+
+          <div class="grupo-campo">
+            <label for="segmento">Segmento da empresa</label>
+            <select id="segmento" name="segmento">
+              <option value="">Selecione uma opção</option>
+              <option value="comercio">Comércio</option>
+              <option value="restaurante">Restaurante</option>
+              <option value="mercado">Mercado</option>
+              <option value="clinica">Clínica</option>
+              <option value="escola">Escola</option>
+              <option value="outro">Outro</option>
+            </select>
+          </div>
+
+          <div class="grupo-campo campo-maior">
+            <label for="endereco">Endereço</label>
+            <input type="text" id="endereco" name="endereco" placeholder="Rua, número, bairro, cidade">
+          </div>
+
+          <div class="grupo-campo">
+            <label for="quantidade-funcionarios">Quantidade de funcionários</label>
+            <input type="number" id="quantidade-funcionarios" name="quantidade-funcionarios" placeholder="Ex: 10">
+          </div>
+
+          <div class="grupo-campo">
+            <label for="turnos">Quantidade de turnos</label>
+            <select id="turnos" name="turnos">
+              <option value="">Selecione</option>
+              <option value="1">1 turno</option>
+              <option value="2">2 turnos</option>
+              <option value="3">3 turnos</option>
+              <option value="4">4 ou mais turnos</option>
+            </select>
+          </div>
+
+          <div class="grupo-campo campo-maior">
+            <label for="observacoes">Observações</label>
+            <textarea id="observacoes" name="observacoes" rows="4" placeholder="Descreva alguma necessidade específica da empresa"></textarea>
+          </div>
+
+          <div class="botoes-formulario">
+            <button type="submit" class="botao botao-principal">Salvar cadastro</button>
+            <button type="reset" class="botao botao-secundario">Limpar dados</button>
+          </div>
+
+        </form>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="rodape">
+    <div class="container rodape-conteudo">
+      <p>&copy; 2026 WorkScale - Projeto Integrador DSM/FATEC Franca.</p>
+      <p>Desenvolvido por Ana Laura Tomaz Santos, Bianca Silva de Oliveira, Bruno Josué Alves de Oliveira
+e Marco Antonio Alves de Amorim.</p>
+    </div>
+  </footer>
+
+  <script src="./js/script.js"></script>
+
+</body>
+</html>

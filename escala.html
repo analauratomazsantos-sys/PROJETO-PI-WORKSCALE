@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Montagem da Escala | WorkScale</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+  <header class="cabecalho">
+    <div class="container cabecalho-conteudo">
+
+      <a href="index.html" class="logo-area">
+        <img src="./imagens/logo-workscale.png" alt="Logo WorkScale" class="logo">
+      </a>
+
+      <nav class="menu">
+        <a href="index.html">Início</a>
+        <a href="empresa.html">Cadastro da Empresa</a>
+        <a href="escala.html" class="ativo">Montagem da Escala</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="faq.html">FAQ</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <main>
+
+    <section class="secao secao-clara">
+      <div class="container">
+
+        <h1 class="titulo-secao">Montagem da Escala</h1>
+
+        <p class="subtitulo-secao">
+          Cadastre os colaboradores, defina turnos e organize a escala semanal de trabalho.
+        </p>
+
+        <form class="formulario">
+
+          <div class="grupo-campo">
+            <label for="nome-funcionario">Nome do funcionário</label>
+            <input type="text" id="nome-funcionario" name="nome-funcionario" placeholder="Ex: Maria Oliveira">
+          </div>
+
+          <div class="grupo-campo">
+            <label for="cpf">CPF</label>
+            <input type="text" id="cpf" name="cpf" placeholder="000.000.000-00">
+          </div>
+
+          <div class="grupo-campo">
+            <label for="telefone">Telefone</label>
+            <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000">
+          </div>
+
+          <div class="grupo-campo">
+            <label for="cargo">Cargo/Função</label>
+            <input type="text" id="cargo" name="cargo" placeholder="Ex: Atendente">
+          </div>
+
+          <div class="grupo-campo">
+            <label for="turno">Turno</label>
+            <select id="turno" name="turno">
+              <option value="">Selecione</option>
+              <option value="manha">Manhã</option>
+              <option value="tarde">Tarde</option>
+              <option value="noite">Noite</option>
+              <option value="integral">Integral</option>
+            </select>
+          </div>
+
+          <div class="grupo-campo">
+            <label for="entrada">Horário de entrada</label>
+            <input type="time" id="entrada" name="entrada">
+          </div>
+
+          <div class="grupo-campo">
+            <label for="saida">Horário de saída</label>
+            <input type="time" id="saida" name="saida">
+          </div>
+
+          <div class="grupo-campo">
+            <label for="folga">Dia de folga</label>
+            <select id="folga" name="folga">
+              <option value="">Selecione</option>
+              <option value="segunda">Segunda-feira</option>
+              <option value="terca">Terça-feira</option>
+              <option value="quarta">Quarta-feira</option>
+              <option value="quinta">Quinta-feira</option>
+              <option value="sexta">Sexta-feira</option>
+              <option value="sabado">Sábado</option>
+              <option value="domingo">Domingo</option>
+            </select>
+          </div>
+
+          <div class="grupo-campo campo-maior">
+            <label>Dias disponíveis</label>
+
+            <div class="dias-semana">
+
+              <label class="dia-card">
+                <input type="checkbox" name="dias" value="segunda">
+                <span>Segunda</span>
+              </label>
+
+              <label class="dia-card">
+                <input type="checkbox" name="dias" value="terca">
+                <span>Terça</span>
+              </label>
+
+              <label class="dia-card">
+                <input type="checkbox" name="dias" value="quarta">
+                <span>Quarta</span>
+              </label>
+
+              <label class="dia-card">
+                <input type="checkbox" name="dias" value="quinta">
+                <span>Quinta</span>
+              </label>
+
+              <label class="dia-card">
+                <input type="checkbox" name="dias" value="sexta">
+                <span>Sexta</span>
+              </label>
+
+              <label class="dia-card">
+                <input type="checkbox" name="dias" value="sabado">
+                <span>Sábado</span>
+              </label>
+
+              <label class="dia-card">
+                <input type="checkbox" name="dias" value="domingo">
+                <span>Domingo</span>
+              </label>
+
+            </div>
+          </div>
+
+          <div class="grupo-campo campo-maior">
+            <label for="observacoes">Observações sobre a escala</label>
+            <textarea id="observacoes" name="observacoes" rows="4" placeholder="Ex: Funcionário não pode trabalhar aos domingos."></textarea>
+          </div>
+
+          <div class="botoes-formulario">
+            <button type="button" class="botao botao-secundario">Adicionar funcionário</button>
+            <button type="submit" class="botao botao-principal">Salvar escala</button>
+            <button type="reset" class="botao botao-secundario">Limpar dados</button>
+          </div>
+
+        </form>
+
+        <div class="tabela-escala">
+          <h2>Prévia da escala semanal</h2>
+
+          <div class="tabela-responsiva">
+            <table>
+              <thead>
+                <tr>
+                  <th>Funcionário</th>
+                  <th>Cargo</th>
+                  <th>Turno</th>
+                  <th>Entrada</th>
+                  <th>Saída</th>
+                  <th>Folga</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td>Exemplo: Maria Oliveira</td>
+                  <td>Atendente</td>
+                  <td>Manhã</td>
+                  <td>08:00</td>
+                  <td>14:00</td>
+                  <td>Domingo</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="rodape">
+    <div class="container rodape-conteudo">
+      <p>&copy; 2026 WorkScale - Projeto Integrador DSM/FATEC Franca.</p>
+      <p>Desenvolvido por  Ana Laura Tomaz Santos, Bianca Silva de Oliveira, Bruno Josué Alves de Oliveira
+e Marco Antonio Alves de Amorim.</p>
+    </div>
+  </footer>
+
+  <script src="./js/script.js"></script>
+
+</body>
+</html>
