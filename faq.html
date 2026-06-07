@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FAQ | WorkScale</title>
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/faq.css">
 </head>
 <body>
 
@@ -23,21 +24,264 @@
         <a href="faq.html" class="ativo">FAQ</a>
         <a href="melhorias.html">Melhorias</a>
         <a href="funcionalidades.html">Funcionalidades</a>
-
         <a href="login.html" class="btn-acesso">Entrar / Cadastre-se</a>
       </nav>
 
     </div>
   </header>
 
-  <main class="secao">
+  
+  <section class="faq-hero">
+    <div class="container">
+      <h1>Perguntas Frequentes</h1>
+      <p>Encontre respostas rápidas sobre o WorkScale, cadastros, escalas e muito mais.</p>
+    </div>
+  </section>
+
+  
+  <main class="secao-faq">
     <div class="container">
 
-      <h1 class="titulo-secao">Perguntas Frequentes</h1>
+      
+      <div class="faq-busca-wrapper">
+        <span class="busca-icone">&#128269;</span>
+        <input
+          type="text"
+          id="faqBusca"
+          class="faq-busca"
+          placeholder="Pesquise uma dúvida..."
+          oninput="filtrarFaq()"
+        >
+      </div>
 
-      <p class="subtitulo-secao">
-        Esta página será desenvolvida pelos integrantes responsáveis pelas dúvidas frequentes e suporte ao usuário.
-      </p>
+      
+      <div class="faq-filtros">
+        <button class="filtro-btn ativo" onclick="filtrarCategoria('todos', this)">Todas</button>
+        <button class="filtro-btn" onclick="filtrarCategoria('conta', this)">Conta &amp; Acesso</button>
+        <button class="filtro-btn" onclick="filtrarCategoria('escala', this)">Escalas</button>
+        <button class="filtro-btn" onclick="filtrarCategoria('empresa', this)">Empresa</button>
+        <button class="filtro-btn" onclick="filtrarCategoria('suporte', this)">Suporte</button>
+      </div>
+
+      
+      <div class="faq-lista" id="faqLista">
+
+        
+        <div class="faq-item" data-categoria="conta">
+          <button class="faq-pergunta" onclick="toggleFaq(this)">
+            <span class="faq-pergunta-texto">Como faço para criar uma conta no WorkScale?</span>
+            <span class="faq-seta">+</span>
+          </button>
+          <div class="faq-resposta">
+            <div class="faq-resposta-inner">
+              <span class="faq-badge badge-conta">Conta &amp; Acesso</span>
+              <p>Para criar sua conta, clique em <strong>Entrar / Cadastre-se</strong> no menu superior e preencha o formulário de cadastro com nome, e-mail e senha. Após confirmar o e-mail, seu acesso estará liberado.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item" data-categoria="conta">
+          <button class="faq-pergunta" onclick="toggleFaq(this)">
+            <span class="faq-pergunta-texto">Esqueci minha senha. Como recuperá-la?</span>
+            <span class="faq-seta">+</span>
+          </button>
+          <div class="faq-resposta">
+            <div class="faq-resposta-inner">
+              <span class="faq-badge badge-conta">Conta &amp; Acesso</span>
+              <p>Na tela de login, clique em <strong>Esqueci minha senha</strong>. Informe o e-mail cadastrado e você receberá um link para redefinir sua senha. Caso não encontre o e-mail, verifique a caixa de spam.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item" data-categoria="conta">
+          <button class="faq-pergunta" onclick="toggleFaq(this)">
+            <span class="faq-pergunta-texto">Como alterar minha senha ou dados cadastrais?</span>
+            <span class="faq-seta">+</span>
+          </button>
+          <div class="faq-resposta">
+            <div class="faq-resposta-inner">
+              <span class="faq-badge badge-conta">Conta &amp; Acesso</span>
+              <p>Acesse a página de <strong>Alterar Senha</strong> disponível no menu ou nas configurações do seu perfil. Preencha a senha atual e a nova senha para confirmar a alteração.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item" data-categoria="conta">
+          <button class="faq-pergunta" onclick="toggleFaq(this)">
+            <span class="faq-pergunta-texto">Posso ter mais de um usuário administrador na mesma empresa?</span>
+            <span class="faq-seta">+</span>
+          </button>
+          <div class="faq-resposta">
+            <div class="faq-resposta-inner">
+              <span class="faq-badge badge-conta">Conta &amp; Acesso</span>
+              <p>Sim. O WorkScale permite que múltiplos gestores sejam vinculados à mesma empresa, facilitando a administração compartilhada das escalas e dos cadastros de funcionários.</p>
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="faq-item" data-categoria="escala">
+          <button class="faq-pergunta" onclick="toggleFaq(this)">
+            <span class="faq-pergunta-texto">Como criar uma nova escala de trabalho?</span>
+            <span class="faq-seta">+</span>
+          </button>
+          <div class="faq-resposta">
+            <div class="faq-resposta-inner">
+              <span class="faq-badge badge-escala">Escalas</span>
+              <p>Acesse a página <strong>Montagem da Escala</strong> pelo menu. Selecione o funcionário, defina os dias da semana e os turnos desejados e clique em <strong>Salvar Escala</strong>. A escala gerada ficará disponível na tabela de visualização logo abaixo do formulário.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item" data-categoria="escala">
+          <button class="faq-pergunta" onclick="toggleFaq(this)">
+            <span class="faq-pergunta-texto">Posso editar ou excluir uma escala já criada?</span>
+            <span class="faq-seta">+</span>
+          </button>
+          <div class="faq-resposta">
+            <div class="faq-resposta-inner">
+              <span class="faq-badge badge-escala">Escalas</span>
+              <p>Sim. Na tabela de escalas, cada registro possui opções de edição e exclusão. Altere os dados desejados e salve para que a escala seja atualizada imediatamente.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item" data-categoria="escala">
+          <button class="faq-pergunta" onclick="toggleFaq(this)">
+            <span class="faq-pergunta-texto">É possível montar escalas para turnos noturnos?</span>
+            <span class="faq-seta">+</span>
+          </button>
+          <div class="faq-resposta">
+            <div class="faq-resposta-inner">
+              <span class="faq-badge badge-escala">Escalas</span>
+              <p>Sim. O formulário de escala permite informar qualquer horário de início e fim de turno, incluindo turnos que atravessam a meia-noite. Basta inserir os horários correspondentes ao período noturno.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item" data-categoria="escala">
+          <button class="faq-pergunta" onclick="toggleFaq(this)">
+            <span class="faq-pergunta-texto">Como visualizar as escalas de todos os funcionários de uma vez?</span>
+            <span class="faq-seta">+</span>
+          </button>
+          <div class="faq-resposta">
+            <div class="faq-resposta-inner">
+              <span class="faq-badge badge-escala">Escalas</span>
+              <p>Na página <strong>Montagem da Escala</strong>, a tabela exibe todos os registros cadastrados, com nome do funcionário, turno, horários e dias da semana. Use a barra de busca para filtrar por colaborador específico.</p>
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="faq-item" data-categoria="empresa">
+          <button class="faq-pergunta" onclick="toggleFaq(this)">
+            <span class="faq-pergunta-texto">Como cadastrar minha empresa no WorkScale?</span>
+            <span class="faq-seta">+</span>
+          </button>
+          <div class="faq-resposta">
+            <div class="faq-resposta-inner">
+              <span class="faq-badge badge-empresa">Empresa</span>
+              <p>Acesse a página <strong>Cadastro da Empresa</strong>, preencha os dados como razão social, CNPJ, e-mail de contato e responsável pela gestão, e clique em <strong>Salvar</strong>. Após o cadastro, você já pode registrar funcionários e criar escalas.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item" data-categoria="empresa">
+          <button class="faq-pergunta" onclick="toggleFaq(this)">
+            <span class="faq-pergunta-texto">Como adicionar funcionários à minha empresa?</span>
+            <span class="faq-seta">+</span>
+          </button>
+          <div class="faq-resposta">
+            <div class="faq-resposta-inner">
+              <span class="faq-badge badge-empresa">Empresa</span>
+              <p>No formulário de cadastro da empresa, há uma seção de colaboradores onde você informa nome, cargo, turno preferencial e disponibilidade de dias. Cada funcionário pode ser editado ou removido a qualquer momento.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item" data-categoria="empresa">
+          <button class="faq-pergunta" onclick="toggleFaq(this)">
+            <span class="faq-pergunta-texto">Posso cadastrar mais de uma empresa na mesma conta?</span>
+            <span class="faq-seta">+</span>
+          </button>
+          <div class="faq-resposta">
+            <div class="faq-resposta-inner">
+              <span class="faq-badge badge-empresa">Empresa</span>
+              <p>No momento, cada conta está vinculada a uma empresa principal. Caso precise gerenciar múltiplas unidades, entre em contato com o suporte para avaliar alternativas conforme a evolução do sistema.</p>
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="faq-item" data-categoria="suporte">
+          <button class="faq-pergunta" onclick="toggleFaq(this)">
+            <span class="faq-pergunta-texto">O WorkScale funciona no celular?</span>
+            <span class="faq-seta">+</span>
+          </button>
+          <div class="faq-resposta">
+            <div class="faq-resposta-inner">
+              <span class="faq-badge badge-suporte">Suporte</span>
+              <p>Sim! O WorkScale foi desenvolvido com design responsivo, funcionando em smartphones, tablets e computadores. Basta acessar pelo navegador do seu dispositivo.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item" data-categoria="suporte">
+          <button class="faq-pergunta" onclick="toggleFaq(this)">
+            <span class="faq-pergunta-texto">Meus dados estão seguros no WorkScale?</span>
+            <span class="faq-seta">+</span>
+          </button>
+          <div class="faq-resposta">
+            <div class="faq-resposta-inner">
+              <span class="faq-badge badge-suporte">Suporte</span>
+              <p>Sim. Todas as informações cadastradas são armazenadas de forma segura. Adotamos boas práticas de desenvolvimento para proteger os dados da empresa e dos colaboradores.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item" data-categoria="suporte">
+          <button class="faq-pergunta" onclick="toggleFaq(this)">
+            <span class="faq-pergunta-texto">O WorkScale tem custo de uso?</span>
+            <span class="faq-seta">+</span>
+          </button>
+          <div class="faq-resposta">
+            <div class="faq-resposta-inner">
+              <span class="faq-badge badge-suporte">Suporte</span>
+              <p>O WorkScale é um projeto acadêmico desenvolvido no curso de Desenvolvimento de Software Multiplataforma da FATEC Franca. Por isso, o acesso é gratuito durante a fase de desenvolvimento.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item" data-categoria="suporte">
+          <button class="faq-pergunta" onclick="toggleFaq(this)">
+            <span class="faq-pergunta-texto">Encontrei um erro ou bug. Como reportar?</span>
+            <span class="faq-seta">+</span>
+          </button>
+          <div class="faq-resposta">
+            <div class="faq-resposta-inner">
+              <span class="faq-badge badge-suporte">Suporte</span>
+              <p>Acesse a página <strong>Melhorias</strong> no menu e descreva o problema encontrado. Nossa equipe analisa os feedbacks e trabalha continuamente para corrigir falhas e aprimorar o sistema.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      
+      <div class="faq-vazio" id="faqVazio">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+        </svg>
+        <p><strong>Nenhuma pergunta encontrada.</strong></p>
+        <p>Tente outros termos ou entre em contato pelo formulário abaixo.</p>
+      </div>
+
+      
+      <div class="faq-contato">
+        <h2>Ainda tem dúvidas?</h2>
+        <p>Não encontrou o que precisava? Envie seu feedback ou sugestão para nossa equipe.</p>
+        <a href="melhorias.html" class="botao">Enviar mensagem</a>
+      </div>
 
     </div>
   </main>
@@ -45,7 +289,6 @@
   <footer class="rodape">
     <div class="container">
       <p>&copy; 2026 WorkScale - Projeto Integrador DSM/FATEC Franca.</p>
-
       <p>
         Desenvolvido por:
         Ana Laura Tomaz Santos,
@@ -53,9 +296,64 @@
         Bruno Josué Alves de Oliveira
         e Marco Antonio Alves de Amorim.
       </p>
-
     </div>
   </footer>
+
+  <script>
+    function toggleFaq(btn) {
+      const item = btn.closest('.faq-item');
+      const estaAberto = item.classList.contains('aberto');
+
+      
+      document.querySelectorAll('.faq-item.aberto').forEach(el => el.classList.remove('aberto'));
+
+      
+      if (!estaAberto) item.classList.add('aberto');
+    }
+
+    
+    let categoriaAtiva = 'todos';
+
+    function filtrarCategoria(cat, btn) {
+      categoriaAtiva = cat;
+
+      document.querySelectorAll('.filtro-btn').forEach(b => b.classList.remove('ativo'));
+      btn.classList.add('ativo');
+
+      document.getElementById('faqBusca').value = '';
+      aplicarFiltros();
+    }
+
+    
+    function filtrarFaq() {
+      aplicarFiltros();
+    }
+
+    function aplicarFiltros() {
+      const termo = document.getElementById('faqBusca').value.toLowerCase().trim();
+      const itens = document.querySelectorAll('.faq-item');
+      let visiveis = 0;
+
+      itens.forEach(item => {
+        const cat = item.dataset.categoria;
+        const texto = item.querySelector('.faq-pergunta-texto').textContent.toLowerCase();
+        const resp  = item.querySelector('.faq-resposta-inner').textContent.toLowerCase();
+
+        const matchCat   = categoriaAtiva === 'todos' || cat === categoriaAtiva;
+        const matchTexto = !termo || texto.includes(termo) || resp.includes(termo);
+
+        if (matchCat && matchTexto) {
+          item.style.display = '';
+          visiveis++;
+        } else {
+          item.style.display = 'none';
+          item.classList.remove('aberto');
+        }
+      });
+
+      document.getElementById('faqVazio').style.display = visiveis === 0 ? 'block' : 'none';
+    }
+  </script>
 
 </body>
 </html>
