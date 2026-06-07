@@ -533,3 +533,23 @@ button.botao {
     grid-template-columns: 1fr;
   }
 }
+
+.aviso-demo {
+    background-color: #f4f8ff;
+    border-left: 5px solid #4f46e5;
+    padding: 15px 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+}
+
+.aviso-demo p {
+    margin: 0;
+    color: #333;
+    font-size: 15px;
+}
+
+.botoes-escala {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}

@@ -146,15 +146,18 @@
           </div>
 
           <div class="botoes-formulario">
-            <button type="button" class="botao botao-secundario">Adicionar funcionário</button>
-            <button type="submit" class="botao botao-principal">Salvar escala</button>
+            <button type="button" id="btnAdicionar" class="botao botao-principal">Adicionar Funcionário</button>
             <button type="reset" class="botao botao-secundario">Limpar dados</button>
           </div>
 
         </form>
 
+        <div class="aviso-demo">
+            <p>💡 Cadastre os colaboradores e clique em "Adicionar funcionário" para incluí-los na escala da empresa.</p>
+        </div>
+
         <div class="tabela-escala">
-          <h2>Prévia da escala semanal</h2>
+          <h2>Funcionários Cadastrados</h2>
 
           <div class="tabela-responsiva">
             <table>
@@ -169,7 +172,7 @@
                 </tr>
               </thead>
 
-              <tbody>
+              <tbody id="listaFuncionarios">
                 <tr>
                   <td>Exemplo: Maria Oliveira</td>
                   <td>Atendente</td>
@@ -184,6 +187,19 @@
         </div>
 
       </div>
+      
+
+<div class="botoes-escala">
+  <button
+    type="button"
+    id="btnGerarEscala"
+    class="botao botao-principal">
+    Gerar Escala
+  </button>
+</div>
+
+      <div id="escalaGerada"></div>
+
     </section>
 
   </main>
@@ -196,7 +212,7 @@ e Marco Antonio Alves de Amorim.</p>
     </div>
   </footer>
 
-  <script src="./js/script.js"></script>
+  <script src="./js/escala.js"></script>
 
 </body>
 </html>
