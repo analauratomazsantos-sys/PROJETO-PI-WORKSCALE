@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WorkScale | Alterar Senha</title>
+
+    <link rel="stylesheet" href="./css/AlterarSenha.css">
+</head>
+<body>
+
+    <div class="senha-container">
+
+        <img src="./imagens/logo-workscale.png"
+             alt="Logo WorkScale"
+             class="logo">
+
+        <h1>Recuperar Senha</h1>
+
+        <p class="subtitulo">
+            Informe seu usuário e defina uma nova senha.
+        </p>
+
+        <form id="alterarSenhaForm">
+
+            <div class="campo">
+                <label>Usuário</label>
+                <input
+                    type="text"
+                    id="usuario"
+                    placeholder="Digite seu usuário"
+                    required>
+            </div>
+
+            <div class="campo">
+                <label>Nova Senha</label>
+                <input
+                    type="password"
+                    id="novaSenha"
+                    placeholder="Digite sua nova senha"
+                    required>
+            </div>
+
+            <div class="campo">
+                <label>Confirmar Nova Senha</label>
+                <input
+                    type="password"
+                    id="confirmarSenha"
+                    placeholder="Confirme sua nova senha"
+                    required>
+            </div>
+
+            <button type="submit">
+                Alterar Senha
+            </button>
+
+        </form>
+
+        <p class="voltar">
+            <a href="login.html">Voltar para o Login</a>
+        </p>
+
+    </div>
+
+    <script src="./js/alterarSenha.js"></script>
+
+</body>
+</html>
