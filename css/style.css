@@ -553,3 +553,20 @@ button.botao {
     justify-content: center;
     margin: 30px 0;
 }
+
+/* Página Sobre */
+
+main{
+    max-width:1100px;
+    margin:auto;
+    padding:40px 20px;
+}
+
+section{
+    margin-bottom:50px;
+}
+
+section h2{
+    color:#1f4e79;
+    margin-bottom:15px;
+}
